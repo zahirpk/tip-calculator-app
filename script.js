@@ -77,6 +77,7 @@ let tipAmount=0;
 let amount=0;
 let totalAmount=0;
 
+
 if((bill.value==='') && (value===undefined || myValue.value==='')){
  e.preventDefault();
 }
@@ -84,10 +85,9 @@ else if(people.value===''&& bill.value!==''){
 error.innerHTML="Can,t be zero"  
 tippercentage.innerHTML= '$0.00';
 amountPerHead.innerHTML='&0.00';
-} 
-else if((amountOfBill!==0&&numberOfPeople!==0)){
+} else if((amountOfBill!==0&&numberOfPeople!==0)){
 
-  if((value===undefined && myValue.value==='')){
+  if((value===undefined && (myValue.value===''))){
      amount= amountOfBill;
     totalAmount= amount/numberOfPeople;
     tippercentage.innerHTML= "$"+"0.00";
